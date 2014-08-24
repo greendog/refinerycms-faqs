@@ -1,0 +1,6 @@
+<%= render '/refinery/faq/admin/submenu' %>
+<section id='records'>
+  <%= render 'records' %>
+</section>
+
+<%= render '/refinery/admin/make_sortable', options: {tree: false} if !searching? and ::Refinery::Faq::Admin::FaqController.sortable? and ::Refinery::Faq::Faq.many? %>

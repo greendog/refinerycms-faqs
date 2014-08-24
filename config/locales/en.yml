@@ -1,0 +1,45 @@
+en:
+  refinery:
+    plugins:
+      faq:
+        title: Faqs
+    faq:
+      admin:
+        categories:
+          category:
+            edit: Edit this category
+            delete: Delete this category forever
+          index:
+            no_items_yet: 'There are no categories yet. Click "%{create}" to add your first category.'
+        faq:
+          actions:
+            create_new: Add New Faq
+            reorder: Reorder Faqs
+            reorder_done: Done Reordering Faqs
+          records:
+            title: Faqs
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Faqs yet. Click "Add New Faq" to add your first faq.
+          faq:
+            view_live_html: View this faq live <br/><em>(opens in a new window)</em>
+            edit: Edit this faq
+            delete: Remove this faq forever
+        submenu:
+            categories:
+              title: Categories
+              manage: Manage
+              new: Create new category
+            faq:
+              title: Faq
+              manage: Manage faq
+              new: Create new faq
+              uncategorized: Uncategorized faq
+      faq:
+        show:
+          other: Other Faqs
+  activerecord:
+    attributes:
+      'refinery/faq/faq':
+        title: Title
+        body: Body
+        position: Position

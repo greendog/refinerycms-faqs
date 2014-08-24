@@ -1,0 +1,47 @@
+<nav id='actions' class='multilist'>
+  <% if ::Refinery::Faq::Admin::FaqController.searchable? %>
+      <li>
+        <%= render '/refinery/admin/search', :url => refinery.faq_admin_faqs_path %>
+      </li>
+  <% end %>
+
+  <ul class='collapsible_menu'>
+    <li class='not_a_link'>
+      <%= link_to t('.faq.title'), '#',
+                   :class => 'page_copy_icon' %>
+    </li>
+    <li>
+      <%= link_to t('.faq.manage'), refinery.faq_admin_faqs_path,
+                   :class => 'page_icon' %>
+    </li>
+    <li>
+      <%= link_to t('.faq.uncategorized'), refinery.uncategorized_faq_admin_faqs_path,
+                  :class => 'page_icon' %>
+    </li>
+    <li>
+       <%= link_to t('.faq.new'), refinery.new_faq_admin_faq_path,
+                   :class => 'add_icon' %>
+    </li>
+  </ul>
+
+
+  <ul class='collapsible_menu'>
+    <li class='not_a_link'>
+      <%= link_to t('.categories.title'), '#',
+                  :class => 'folder_icon' %>
+    </li>
+    <li>
+      <%= link_to t('.categories.manage'), refinery.faq_admin_categories_path,
+                  :class => 'folder_edit_icon' %>
+    </li>
+    <li>
+      <%= link_to t('.categories.new'), refinery.new_faq_admin_category_path,
+                  :class => 'folder_add_icon' %>
+    </li>
+  </ul>
+
+
+
+</nav>
+
+<% content_for :stylesheets, stylesheet_link_tag('refinery/faq/backend') %>
