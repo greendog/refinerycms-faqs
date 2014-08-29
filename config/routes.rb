@@ -2,7 +2,7 @@ Refinery::Core::Engine.routes.draw do
 
   # Frontend routes
   namespace :faq do
-    resources :faqs, :path => 'faq', :only => [:index, :show]
+    resources :faqs, :controller => "faq", :path => '', :only => [:index, :show]
   end
 
   # Admin routes

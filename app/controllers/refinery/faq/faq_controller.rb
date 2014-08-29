@@ -19,10 +19,10 @@ module Refinery
         present(@page)
       end
 
-    protected
+      protected
 
       def find_all_faqs
-        @faqs = Faq.order('position ASC')
+        @faqs = Refinery::Faq::Faq.order('position ASC')
       end
 
       def find_page

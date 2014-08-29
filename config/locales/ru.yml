@@ -1,0 +1,45 @@
+ru:
+  refinery:
+    plugins:
+      faq:
+        title: ЧАВО
+    faq:
+      admin:
+        categories:
+          category:
+            edit: Редактировать категорию
+            delete: Удалить категорию
+          index:
+            no_items_yet: 'Ничего не найдено. Кликните "%{create}" чтобы создать новую.'
+        faq:
+          actions:
+            create_new: Добавить вопрос
+            reorder: Сортировать вопросы
+            reorder_done: Закончить сортировку
+          records:
+            title: ВОПРОСЫ
+            sorry_no_results: Ничего не найдено.
+            no_items_yet: Сейчас нет вопросов. Создайте новый
+          faq:
+            view_live_html: Смотреть ЧАВо на сайте <br/><em>(в новом окне)</em>
+            edit: Редактировать вопрос
+            delete: Удалить вопрос
+        submenu:
+            categories:
+              title: Категории
+              manage: Управление
+              new: Создать новую категорию
+            faq:
+              title: Вопросы
+              manage: Управлять вопросами
+              new: Создать вопрос
+              uncategorized: Вопросы без категорий
+      faq:
+        show:
+          other: Другие вопросы
+  activerecord:
+    attributes:
+      'refinery/faq/faq':
+        title: Заголовок
+        body: Текст
+        position: Позиция
