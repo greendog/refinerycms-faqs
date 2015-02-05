@@ -12,7 +12,7 @@ module Refinery
       acts_as_indexed :fields => [:title]
 
       has_many :categorizations, :dependent => :destroy, :foreign_key => :faq_id
-      has_many :categories, :through => :categorizations, :source => :faq_category
+      has_many :categories, :through => :categorizations, :source => :faq_category,  :class_name => "Refinery::Faq::Category"
 
 
       def newest_first
