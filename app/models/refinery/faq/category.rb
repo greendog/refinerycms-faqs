@@ -8,7 +8,7 @@ module Refinery
       friendly_id :title, :use => [:globalize]
 
       has_many :categorizations, :dependent => :destroy, :foreign_key => :faq_category_id
-      has_many :faqs, :through => :categorizations, :source => :faq
+      has_many :faqs, :through => :categorizations, :source => :faq, :class_name => "Refinery::Faq::Faq"
 
       validates :title, :presence => true, :uniqueness => true
 
